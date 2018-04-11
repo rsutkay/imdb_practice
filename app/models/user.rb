@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :todo_movies,
+             :through => :favorites,
+             :source => :movie
+
   # Validations
 
   # Include default devise modules. Others available are:
